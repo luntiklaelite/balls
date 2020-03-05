@@ -9,17 +9,24 @@ namespace smallGame
 {
     public class Rect
     {
-        internal float x, y, width, height;
-        public Rect(float x, float y, float width, float height)
+        internal float x, y, width, height, kray;
+        internal PointF p_1, p_2, p_3, p_4;
+        public Rect(float x, float y, float width, float height, float kray)
         {
             this.x = x;
             this.y = y;
             this.width = width;
             this.height = height;
+            this.kray = kray;
         }
         public void onDraw(Graphics g)
         {
-            g.FillRectangle(Brushes.GreenYellow, x - width / 2, y - height / 2, width, height);
+            p_1 = new PointF(x - width / 2, y + height / 2);
+            p_2 = new PointF(x - width / 2 + kray, y - height / 2);
+            p_3 = new PointF(x + width / 2 - kray, y - height / 2);
+            p_4 = new PointF(x + width / 2, y + height / 2);
+            PointF[] points = { p_1, p_2, p_3, p_4 };
+            g.FillPolygon(Brushes.Black, points);
         }
     }
 }

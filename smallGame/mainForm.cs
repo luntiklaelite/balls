@@ -21,7 +21,7 @@ namespace smallGame
             InitializeComponent();
             rand = new Random();
             ball = new Ball(ClientSize.Width / 2, ClientSize.Height / 2, 10, rand.Next(-5, 5), rand.Next(-5, 5));
-            rect_pl = new Rect(ClientSize.Width / 2, ClientSize.Height - 20, 100, 20);
+            rect_pl = new Rect(ClientSize.Width / 2, ClientSize.Height - 20, 100, 20, 15);
             isGameStarted = false;
         }
 
