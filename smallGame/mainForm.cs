@@ -13,21 +13,22 @@ namespace smallGame
     public partial class mainForm : Form
     {
         Ball ball;
+        Rect rect_pl;
         bool isGameStarted;
         Random rand;
-        Graphics g;
         public mainForm()
         {
             InitializeComponent();
             rand = new Random();
-            ball = new Ball(ClientSize.Width / 2, ClientSize.Height / 2, 10f, rand.Next(-5, 5), rand.Next(-5, 5));
+            ball = new Ball(ClientSize.Width / 2, ClientSize.Height / 2, 10, rand.Next(-5, 5), rand.Next(-5, 5));
+            rect_pl = new Rect(ClientSize.Width / 2, ClientSize.Height - 20, 100, 20);
             isGameStarted = false;
         }
 
         private void mainForm_Paint(object sender, PaintEventArgs e)
         {
             ball.onDraw(e.Graphics);
-            g = e.Graphics;
+            rect_pl.onDraw(e.Graphics);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -47,6 +48,11 @@ namespace smallGame
                 timer1.Start();
                 isGameStarted = true;
             }
+        }
+
+        private void mainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            rect_pl.x = e.X;
         }
     }
 }
