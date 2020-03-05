@@ -1,0 +1,10 @@
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\bin\Debug\smallGame.exe.config
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\bin\Debug\smallGame.exe
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\bin\Debug\smallGame.pdb
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.csprojAssemblyReference.cache
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.mainForm.resources
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.Properties.Resources.resources
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.csproj.GenerateResource.cache
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.csproj.CoreCompileInputs.cache
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.exe
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.pdb
