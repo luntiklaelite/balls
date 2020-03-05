@@ -9,7 +9,7 @@ namespace smallGame
 {
     public class Ball
     {
-        float x, y, rad, speedX, speedY;
+        internal float x, y, rad, speedX, speedY;
         Random rand;
         SolidBrush brush;
         public Ball(float x, float y, float rad, float speedX, float speedY)
@@ -18,8 +18,8 @@ namespace smallGame
             this.x = x;
             this.y = y;
             this.rad = rad;
-            this.speedX = rand.Next((int)-speedX-1, (int)speedX+1);
-            this.speedY = rand.Next((int)-speedY-1, (int)speedY+1);
+            this.speedX = speedX;
+            this.speedY = speedY;
             brush = new SolidBrush(Color.FromArgb(rand.Next(255), rand.Next(255), rand.Next(255)));
         }
         public void onDraw(Graphics g)

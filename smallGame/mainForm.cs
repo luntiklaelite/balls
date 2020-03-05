@@ -14,11 +14,13 @@ namespace smallGame
     {
         Ball ball;
         bool isGameStarted;
+        Random rand;
         Graphics g;
         public mainForm()
         {
             InitializeComponent();
-            ball = new Ball(ClientSize.Width / 2, ClientSize.Height / 2, 10f, 2f, 2f);
+            rand = new Random();
+            ball = new Ball(ClientSize.Width / 2, ClientSize.Height / 2, 10f, rand.Next(-5, 5), rand.Next(-5, 5));
             isGameStarted = false;
         }
 
@@ -30,6 +32,10 @@ namespace smallGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (ball.x + ball.rad >= ClientSize.Width || ball.x - ball.rad <= 0)
+                ball.speedX = -ball.speedX;
+            if (ball.y + ball.rad >= ClientSize.Height || ball.y - ball.rad <= 0)
+                ball.speedY = -ball.speedY;
             ball.move();
             Refresh();
         }
