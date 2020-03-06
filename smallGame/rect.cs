@@ -21,7 +21,7 @@ namespace smallGame
         }
         public void onDraw(Graphics g)
         {
-            p_1 = new PointF(x - width / 2, y + height / 2);
+            p_1 = new PointF(x - width / 2, y + height / 2); // 
             p_2 = new PointF(x - width / 2 + kray, y - height / 2);
             p_3 = new PointF(x + width / 2 - kray, y - height / 2);
             p_4 = new PointF(x + width / 2, y + height / 2);
