@@ -22,10 +22,20 @@ namespace smallGame
         {
             InitializeComponent();
             rand = new Random();
+            newGame();
+        }
+
+        private void newGame()
+        {
             ball = new Ball(ClientSize.Width / 2, ClientSize.Height / 2, 10, rand.Next(-5, 5), rand.Next(-5, 5));
+            while (ball.speedX > -2 && ball.speedX < 2)
+                ball.speedX = rand.Next(-5, 5);
+            while (ball.speedY > -2 && ball.speedY < 2)
+                ball.speedY = rand.Next(-5, 5);
             rect_pl = new Rect(ClientSize.Width / 2, ClientSize.Height - 20, 150, 20, 30);
             isGameStarted = false;
             partPl = "";
+            Refresh();
         }
 
         private void mainForm_Paint(object sender, PaintEventArgs e)
@@ -79,9 +89,17 @@ namespace smallGame
         
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (ball.y > rect_pl.p_4.Y)
+            {
+                timer1.Stop();
+                MessageBox.Show("Вы проиграли!");
+                isGameStarted = false;
+                newGame();
+                return;
+            }
             if (ball.x + ball.rad >= ClientSize.Width || ball.x - ball.rad <= 0)
                 ball.speedX = -ball.speedX;
-            if (ball.y + ball.rad >= ClientSize.Height || ball.y - ball.rad <= 0)
+            if (ball.y - ball.rad <= 0)
                 ball.speedY = -ball.speedY;
             if (ball.y + ball.rad >= rect_pl.p_2.Y && inBall(ball, rect_pl) && partPl == "middle")
                 ball.speedY = -ball.speedY;
