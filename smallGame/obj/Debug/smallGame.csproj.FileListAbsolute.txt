@@ -8,3 +8,4 @@ C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.cspr
 C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.csproj.CoreCompileInputs.cache
 C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.exe
 C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.pdb
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Debug\smallGame.settingsForm.resources
