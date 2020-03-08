@@ -27,11 +27,17 @@ namespace smallGame
             y45 = y + rad * (float)Math.Sin((315 * Math.PI) / 180);
             //x = r * cos(fi)
             //y = r * sin(fi)
+            
+        }
+
+        public void setColor()
+        {
             if (Properties.Settings.Default.color_ball_is)
                 brush = new SolidBrush(Color.FromArgb(rand.Next(255), rand.Next(255), rand.Next(255)));
             else
                 brush = new SolidBrush(Properties.Settings.Default.color_ball);
         }
+
         public void onDraw(Graphics g)
         {
             g.FillEllipse(brush, x - rad, y - rad, 2 * rad, 2 * rad);

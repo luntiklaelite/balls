@@ -58,5 +58,10 @@ namespace smallGame
             //standart:cadet_blue
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.record = 0;
+        }
     }
 }

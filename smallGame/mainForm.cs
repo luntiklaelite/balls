@@ -32,15 +32,15 @@ namespace smallGame
             score = 0;
             scoreLabel.Text = "SCORE: ";
             recordLabel.Text = "TOP SCORE: " + Properties.Settings.Default.record;
-            ball = new Ball(panel1.Width / 2, panel1.Height / 2, 10, rand.Next(-5, 5), rand.Next(-5, 5));
+            ball = new Ball(ClientSize.Width / 2, ClientSize.Height / 2, 10, rand.Next(-5, 5), rand.Next(-5, 5));
             while (ball.speedX > -2 && ball.speedX < 2)
                 ball.speedX = rand.Next(-5, 5);
             while (ball.speedY > -2 && ball.speedY < 2)
                 ball.speedY = rand.Next(-5, 5);
-            rect_pl = new Rect(panel1.Width / 2, panel1.Height - 20, 150, 20, 30);
-            ball.brush = new SolidBrush(Properties.Settings.Default.color_ball);
+            rect_pl = new Rect(ClientSize.Width / 2, ClientSize.Height - 20, 150, 20, 30);
+            ball.setColor();
             rect_pl.brush = new SolidBrush(Properties.Settings.Default.color_platf);
-            panel1.BackColor = Properties.Settings.Default.color_fon;
+            BackColor = Properties.Settings.Default.color_fon;
             isGameStarted = false;
             partPl = "";
             Refresh();
@@ -48,7 +48,8 @@ namespace smallGame
 
         private void mainForm_Paint(object sender, PaintEventArgs e)
         {
-            
+            ball.onDraw(e.Graphics);
+            rect_pl.onDraw(e.Graphics);
         }
 
         private float dlinaXY(PointF p1, PointF p2)
@@ -121,9 +122,9 @@ namespace smallGame
                 newGame();
                 return;
             }
-            if (ball.x + ball.rad >= panel1.Width || ball.x - ball.rad <= 0)
+            if (ball.x + ball.rad >= ClientSize.Width || ball.x - ball.rad <= 0)
                 ball.speedX = -ball.speedX;
-            if (ball.y - ball.rad <= 0)
+            if (ball.y - ball.rad <= menuStrip1.Height)
             {
                 ball.speedY = -ball.speedY;
                 score++;
@@ -131,15 +132,15 @@ namespace smallGame
             }
             if (ball.y + ball.rad >= rect_pl.p_2.Y && inBall(ball, rect_pl) && partPl == "middle")
             {
-                ball.speedY += rand.Next(10) / 10;
-                ball.speedX += rand.Next(10) / 10;
+                ball.speedY += rand.Next(20) / 10;
+                ball.speedX += rand.Next(20) / 10;
                 ball.speedY = -ball.speedY;
 
             }
             if ((ball.y + ball.rad >= rect_pl.p_2.Y || ball.y45 >= rect_pl.p_2.Y || ball.yminus45 >= rect_pl.p_2.Y) && inBall(ball, rect_pl) && partPl == "trian")
             {
-                ball.speedY += 0.5f;
-                ball.speedX += 0.5f;
+                ball.speedY += rand.Next(20) / 10;
+                ball.speedX += rand.Next(20) / 10;
                 ball.speedX = -ball.speedX;
                 ball.speedY = -ball.speedY;
             }
@@ -163,7 +164,7 @@ namespace smallGame
 
         private void mainForm_MouseMove(object sender, MouseEventArgs e)
         {
-            
+            rect_pl.x = e.X;
         }
 
         private void gameToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -172,22 +173,22 @@ namespace smallGame
             isGameStarted = false;
             settingsForm setform = new settingsForm();
             setform.ShowDialog();
-            ball.brush = new SolidBrush(Properties.Settings.Default.color_ball);
+            ball.setColor();
             rect_pl.brush = new SolidBrush(Properties.Settings.Default.color_platf);
-            panel1.BackColor = Properties.Settings.Default.color_fon;
+            BackColor = Properties.Settings.Default.color_fon;
+            recordLabel.Text = "TOP SCORE: " + Properties.Settings.Default.record;
             Refresh();
             Properties.Settings.Default.Save();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            ball.onDraw(e.Graphics);
-            rect_pl.onDraw(e.Graphics);
+            
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
-            rect_pl.x = e.X;
+            
         }
     }
 }

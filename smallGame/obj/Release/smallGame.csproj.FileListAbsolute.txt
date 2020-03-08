@@ -1,0 +1,10 @@
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\bin\Release\smallGame.exe.config
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\bin\Release\smallGame.exe
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\bin\Release\smallGame.pdb
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.settingsForm.resources
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.mainForm.resources
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.Properties.Resources.resources
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.csproj.GenerateResource.cache
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.csproj.CoreCompileInputs.cache
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.exe
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.pdb
