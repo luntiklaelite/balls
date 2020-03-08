@@ -165,6 +165,13 @@ namespace smallGame
         private void mainForm_MouseMove(object sender, MouseEventArgs e)
         {
             rect_pl.x = e.X;
+            if(inBall(ball, rect_pl) && ball.y + ball.rad > rect_pl.p_2.Y + rect_pl.height/2)
+            {
+                ball.x -= rect_pl.height;
+                ball.speedY += rand.Next(20) / 10;
+                ball.speedX += rand.Next(20) / 10;
+                ball.speedY = -ball.speedY;
+            }
         }
 
         private void gameToolStripMenuItem1_Click(object sender, EventArgs e)

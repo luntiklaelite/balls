@@ -8,3 +8,4 @@ C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.cs
 C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.csproj.CoreCompileInputs.cache
 C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.exe
 C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.pdb
+C:\Users\LUNTIKLAELITE\source\repos\smallGame\smallGame\obj\Release\smallGame.csprojAssemblyReference.cache
